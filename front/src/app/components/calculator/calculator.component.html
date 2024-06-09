@@ -1,0 +1,24 @@
+<div class="card mt-5">
+    <div class="card-header">
+        Kūno masės skaičiuoklė
+    </div>
+    <div class="card-body">
+        <div class="mb-3">
+            <label for="" class="form-label">Įveskite ūgį centimetrais:</label>
+            <input type="text" name="" id="" class="form-control" [(ngModel)]="height">
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label">Įveskite svorį kilogramais:</label>
+            <input type="text" name="" id="" class="form-control" [(ngModel)]="weight">
+        </div>
+        <button class="btn btn-warning" (click)="calculateBMI()">Skaičiuoti</button>
+
+        <div *ngIf="result != null">
+            <hr>
+            <div class="alert alert-info">
+                {{ result }}
+            </div>
+        </div>
+
+    </div>
+</div>
